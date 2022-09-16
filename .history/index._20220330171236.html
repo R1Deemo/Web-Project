@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>测试页面</title>
+    <link rel="shortcut icon" href="favicon.ico" />
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- 初始化css样式
+        /* 把我们所有标签的内外边距清零 */
+* {
+    margin: 0;
+    padding: 0
+}
+/* em 和 i 斜体的文字不倾斜 */
+em,
+i {
+    font-style: normal
+}
+/* 去掉li 的小圆点 */
+li {
+    list-style: none
+}
+
+img {
+    /* border 0 照顾低版本浏览器 如果 图片外面包含了链接会有边框的问题 */
+    border: 0;
+    /* 取消图片底侧有空白缝隙的问题 */
+    vertical-align: middle
+}
+
+button {
+    /* 当我们鼠标经过button 按钮的时候，鼠标变成小手 */
+    cursor: pointer
+}
+
+a {
+    color: #666;
+    text-decoration: none
+}
+a:hover {
+    color: #c81623
+}
+button,
+input {
+    /* "\5B8B\4F53" 就是宋体的意思 这样浏览器兼容性比较好 */
+    font-family: Microsoft YaHei, Heiti SC, tahoma, arial, Hiragino Sans GB, "\5B8B\4F53", sans-serif
+}
+body {
+    /* CSS3 抗锯齿形 让文字显示的更加清晰 */
+    -webkit-font-smoothing: antialiased;
+    background-color: #fff;
+    font: 12px/1.5 Microsoft YaHei, Heiti SC, tahoma, arial, Hiragino Sans GB, "\5B8B\4F53", sans-serif;
+    color: #666
+}
+.hide,
+.none {
+    display: none
+}
+/* 清除浮动 */
+.clearfix:after {
+    visibility: hidden;
+    clear: both;
+    display: block;
+    content: ".";
+    height: 0
+}
+.clearfix {
+    *zoom: 1
+} -->
+</head>
+
+<body>
+    <!--头部模块 -->
+    <div class="header w">
+        <div class="logo">
+            <!-- <img src="images/学成在线.png" alt=""> -->
+            <!-- <img src="images/王者截图.png" alt=""> -->
+            <h1>
+                <a href="index..html" title="王者荣耀">王者荣耀</a>
+            </h1>
+        </div>
+        <!-- 实际开发中要用li+a的做法做导航栏 -->
+        <div class="nav">
+            <ul>
+                <li>
+                    <a href="#">首页</a>
+                </li>
+                <li>
+                    <a href="#">课程</a>
+                </li>
+                <li>
+                    <a href="#">职业规划</a>
+                </li>
+
+            </ul>
+        </div>
+        <!-- 搜索模块 -->
+        <form action="">
+            <div class="search">
+                <input type="search" placeholder="输入关键词">
+                <button></button>
+
+
+            </div>
+        </form>
+
+    </div>
+    <!-- 头部区域结束 -->
+    <!-- banner部分开始 -->
+    <div class="banner">
+        <div class="w">
+            <div class="subnav">
+                <ul>
+                    <li><a href="#">前端开发<span>&gt</span></a></li>
+                    <li><a href="#">前端开发<span>&gt</span></a></li>
+                    <li><a href="#">前端开发<span>&gt</span></a></li>
+                    <li><a href="#">前端开发<span>&gt</span></a></li>
+                    <li><a href="#">前端开发<span>&gt</span></a></li>
+                    <li><a href="#">前端开发<span>&gt</span></a></li>
+                    <li><a href="#">前端开发<span>&gt</span></a></li>
+                    <li><a href="#">前端开发<span>&gt</span></a></li>
+                    <li><a href="#">前端开发<span>&gt</span></a></li>
+
+                </ul>
+
+            </div>
+            <div class="lunbo">
+
+                <!-- 左侧箭头 -->
+                <a href="#" class="pre">&lt</a>
+                <!-- 右侧箭头 -->
+                <a href="#" class="next">&gt</a>
+                <ul>
+                    <li>
+                        <a href="#"><img src="images/貂蝉.jpeg" alt=""></a>
+                    </li>
+                    <li>
+                        <a href="#"><img src="images/公孙离.jpeg" alt=""></a>
+                    </li>
+                    <li>
+                        <a href="#"><img src="images/貂蝉.jpeg" alt=""></a>
+                    </li>
+                    <li>
+                        <a href="#"><img src="images/貂蝉.jpeg" alt=""></a>
+                    </li>
+                    <li>
+                        <a href="#"><img src="images/貂蝉.jpeg" alt=""></a>
+                    </li>
+                </ul>
+                <ul class="promo-nav">
+                    <li class="selected"></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+
+
+            </div>
+            <div class="course">
+                <h2>我的课程表</h2>
+                <div class="bd">
+                    <ul>
+                        <li>
+                            <h4>继续学习 程序设计语言</h4>
+                            <p>正在学习-适用对象</p>
+                        </li>
+                        <li>
+                            <h4>继续学习 程序设计语言</h4>
+                            <p>正在学习-适用对象</p>
+                        </li>
+                        <li>
+                            <h4>继续学习 程序设计语言</h4>
+                            <p>正在学习-适用对象</p>
+                        </li>
+                    </ul>
+                    <a href="#" class="more">全部课程</a>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+    <!-- 两种弹出方法 -->
+    <!-- <script>
+        var more = document.querySelector('.more');
+        more.addEventListener('click', function() {
+            alert("没有更多课程了");
+        })
+        
+    </script> -->
+    <!-- <script>
+        var more = document.querySelector('.more');
+        more.onclick = function() {
+            alert("没有更多课程了");
+        }
+    </script> -->
+    <!-- banner区域结束 -->
+
+    <!-- 精品推荐模块开始 -->
+    <div class="goods w">
+        <h3>精品推荐</h3>
+        <ul>
+            <li><a href="#">推荐</a></li>
+            <li><a href="#">推荐</a></li>
+            <li><a href="#">推荐</a></li>
+            <li><a href="#">推荐</a></li>
+
+        </ul>
+        <a href="#" class="mod">修改兴趣</a>
+    </div>
+    <div class="box w">
+        <div class="box-hd">
+            <h3>净瓶课程</h3>
+            <a href="#">查看全部</a>
+        </div>
+        <div class="box-bd">
+            <ul class="clearfix">
+
+                <li>
+                    <div class="mask">
+
+                    </div><em><img src="images/hot.png" alt=""></em><img src="images/pic.png" alt="">
+                    <h4>think php 5.0 博客系统实战项目演练</h4>
+                    <div class="info"><span>高级</span>* 1125人在学习</div>
+                </li>
+                <li>
+                    <div class="mask">
+
+                    </div><img src="images/pic.png" alt="">
+                    <h4>think php 5.0 博客系统实战项目演练</h4>
+                    <div class="info"><span>高级</span>* 1125人在学习</div>
+                </li>
+                <li>
+                    <div class="mask">
+
+                    </div><img src="images/pic.png" alt="">
+                    <h4>think php 5.0 博客系统实战项目演练</h4>
+                    <div class="info"><span>高级</span>* 1125人在学习</div>
+                </li>
+                <li>
+                    <div class="mask">
+
+                    </div><img src="images/pic.png" alt="">
+                    <h4>think php 5.0 博客系统实战项目演练</h4>
+                    <div class="info"><span>高级</span>* 1125人在学习</div>
+                </li>
+                <li>
+                    <div class="mask">
+
+                    </div><img src="images/pic.png" alt="">
+                    <h4>think php 5.0 博客系统实战项目演练</h4>
+                    <div class="info"><span>高级</span>* 1125人在学习</div>
+                </li>
+                <li>
+                    <div class="mask">
+
+                    </div><img src="images/pic.png" alt="">
+                    <h4>think php 5.0 博客系统实战项目演练</h4>
+                    <div class="info"><span>高级</span>* 1125人在学习</div>
+                </li>
+                <li>
+                    <div class="mask">
+
+                    </div><img src="images/pic.png" alt="">
+                    <h4>think php 5.0 博客系统实战项目演练</h4>
+                    <div class="info"><span>高级</span>* 1125人在学习</div>
+                </li>
+                <li>
+                    <div class="mask">
+
+                    </div><img src="images/pic.png" alt="">
+                    <h4>think php 5.0 博客系统实战项目演练</h4>
+                    <div class="info"><span>高级</span>* 1125人在学习</div>
+                </li>
+                <li>
+                    <div class="mask">
+
+                    </div><img src="images/pic.png" alt="">
+                    <h4>think php 5.0 博客系统实战项目演练</h4>
+                    <div class="info"><span>高级</span>* 1125人在学习</div>
+                </li>
+                <li>
+                    <div class="mask">
+
+                    </div><img src="images/pic.png" alt="">
+                    <h4>think php 5.0 博客系统实战项目演练</h4>
+                    <div class="info"><span>高级</span>* 1125人在学习</div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- 精品课程结束 -->
+    <video src="videos/video1.mp4" autoplay="autoplay" muted="muted" loop="loop" controls="controls"></video>
+
+    <!-- 淘宝页面 -->
+    <div class="box2 w">
+        <div class="box2-hd">
+            <h3>淘宝页面</h3>
+            <a href="#">查看全部</a>
+        </div>
+        <div class="box2-bd">
+            <ul class="clearfix">
+
+                <li>
+                    <img src="images/pic.png" alt="">
+                    <h4>think php 5.0 博客系统实战项目演练</h4>
+                    <div class="info"><span>高级</span>* 1125人在学习</div>
+                </li>
+                <li>
+                    <img src="images/pic.png" alt="">
+                    <h4>think php 5.0 博客系统实战项目演练</h4>
+                    <div class="info"><span>高级</span>* 1125人在学习</div>
+                </li>
+                <li>
+                    <img src="images/pic.png" alt="">
+                    <h4>think php 5.0 博客系统实战项目演练</h4>
+                    <div class="info"><span>高级</span>* 1125人在学习</div>
+                </li>
+                <li>
+                    <img src="images/pic.png" alt="">
+                    <h4>think php 5.0 博客系统实战项目演练</h4>
+                    <div class="info"><span>高级</span>* 1125人在学习</div>
+                </li>
+                <li>
+                    <img src="images/pic.png" alt="">
+                    <h4>think php 5.0 博客系统实战项目演练</h4>
+                    <div class="info"><span>高级</span>* 1125人在学习</div>
+                </li>
+                <li>
+                    <img src="images/pic.png" alt="">
+                    <h4>think php 5.0 博客系统实战项目演练</h4>
+                    <div class="info"><span>高级</span>* 1125人在学习</div>
+                </li>
+                <li>
+                    <img src="images/pic.png" alt="">
+                    <h4>think php 5.0 博客系统实战项目演练</h4>
+                    <div class="info"><span>高级</span>* 1125人在学习</div>
+                </li>
+                <li>
+                    <img src="images/pic.png" alt="">
+                    <h4>think php 5.0 博客系统实战项目演练</h4>
+                    <div class="info"><span>高级</span>* 1125人在学习</div>
+                </li>
+                <li>
+                    <img src="images/pic.png" alt="">
+                    <h4>think php 5.0 博客系统实战项目演练</h4>
+                    <div class="info"><span>高级</span>* 1125人在学习</div>
+                </li>
+                <li>
+                    <img src="images/pic.png" alt="">
+                    <h4>think php 5.0 博客系统实战项目演练</h4>
+                    <div class="info"><span>高级</span>* 1125人在学习</div>
+                </li>
+                <li class="jiage"><img src="images/pic.png" alt="">
+                    <h4>think php 5.0 博客系统实战项目演练课程</h4>
+                    <div class="price">
+                        <span class="miaosha">$1650
+                            <i></i>
+                        </span>
+                        <span class="ji">$2000</span>
+                    </div>
+                </li>
+                <li>
+                    <img src="images/pic.png" alt="">
+                    <h4>think php 5.0 博客系统实战项目演练</h4>
+                    <div class="bar">
+                        <div class="barin">
+
+                        </div>
+                    </div>
+                </li>
+
+            </ul>
+        </div>
+    </div>
+    <!-- 淘宝页面结束 -->
+    <!-- 下拉菜单测试 -->
+    <ul class="navbar w clearfix">
+        <li class="xiala">
+            <a href="#">课程</a>
+            <ul>
+                <li>java</li>
+                <li>c语言</li>
+                <li>python</li>
+                <li>html</li>
+            </ul>
+        </li>
+        <li class="xiala">
+            <a href="#">英雄</a>
+            <ul>
+                <li><a href="javascript:;">白起</a></li>
+                <li><a href="javascript:;">老夫子</a></li>
+                <li><a href="javascript:;">貂蝉</a></li>
+                <li><a href="javascript:;">吕布</a></li>
+            </ul>
+        </li>
+        <li class="xiala">
+            <a href="#">课程</a>
+            <ul>
+                <li>1</li>
+                <li>2</li>
+                <li>3</li>
+                <li>4</li>
+            </ul>
+        </li>
+    </ul>
+    <!-- <script>
+        var navbar = document.querySelector('.navbar');
+        var lis = navbar.children;
+        for (var i = 0; i < lis.length; i++) {
+            lis[i].onmouseover = function() {
+                this.children[1].style.display = 'block';
+            }
+            lis[i].onmouseout = function() {
+                this.children[1].style.display = 'none';
+            }
+        }
+    </script> -->
+    <!-- 下拉菜单结束 -->
+
+    <!-- 侧边倒计时模块 -->
+    <div class="time">
+        <span class="hour">1</span>
+        <span class="min">2</span>
+        <span class="sec">3</span>
+
+    </div>
+    <script>
+        var hour = document.querySelector('.hour');
+        var min = document.querySelector('.min');
+        var sec = document.querySelector('.sec');
+        var inputTime = +new Date('2022-5-20 18:00:00');
+        countDown();
+        setInterval(countDown, 1000);
+
+        function countDown() {
+            var nowTime = +new Date();
+            var times = (inputTime - nowTime) / 1000;
+            var h = parseInt(times / 60 / 60 % 24);
+            h = h < 10 ? '0' + h : h;
+            hour.innerHTML = h;
+            var m = parseInt(times / 60 % 60);
+            m = m < 10 ? '0' + m : m;
+            min.innerHTML = m;
+            var s = parseInt(times % 60);
+            s = s < 10 ? '0' + s : s;
+            sec.innerHTML = s;
+        }
+    </script>
+    <!-- 侧边倒计时模块结束 -->
+    <!-- 页码 -->
+    <div class="yema ">
+        <a href="#" class="shang">&lt;&lt;上一页</a>
+        <a href="#">2</a>
+        <a href="#">3</a>
+        <a href="#">4</a>
+        <a href="#">5</a>
+        <a href="#">6</a>
+        <a href="#">7</a>
+        <a href="#" class="xia">&gt;&gt;下一页</a> 到第<input type="text" name="" id="" style="height:36px;width:36px;border:1px solid #ccc;background-color: #f7f7f7; outline:none;">页<button style="width: 60px;height:36px;border:1px solid #ccc;background-color: #f7f7f7;">确定</button>
+
+    </div>
+    <!-- 页码结束 -->
+    <!-- footer模块 -->
+    <div class="footer">
+        <div class="w">
+            <div class="copyright">
+                <img src="images/学成在线.png" alt="">
+                <p>学成在线致力于普及中国最好的教育它与中国一流大学和机构合作提供在线课程。<br> © 2017年XTCG Inc.保留所有权利。-沪ICP备15025210号</p>
+                <a href="#" class="app">下载APP</a>
+            </div>
+            <div class="links">
+                <dl>
+                    <dt>关于学成网</dt>
+                    <dd><a href="#">关于</a></dd>
+                    <dd><a href="#">管理团队</a></dd>
+                    <dd><a href="#">工作机会</a></dd>
+                    <dd><a href="#">客户服务</a></dd>
+                    <dd><a href="#">帮助</a></dd>
+                </dl>
+                <dl>
+                    <dt>关于学成网</dt>
+                    <dd><a href="#">关于</a></dd>
+                    <dd><a href="#">管理团队</a></dd>
+                    <dd><a href="#">工作机会</a></dd>
+                    <dd><a href="#">客户服务</a></dd>
+                    <dd><a href="#">帮助</a></dd>
+                </dl>
+                <dl>
+                    <dt>关于学成网</dt>
+                    <dd><a href="#">关于</a></dd>
+                    <dd><a href="#">管理团队</a></dd>
+                    <dd><a href="#">工作机会</a></dd>
+                    <dd><a href="#">客户服务</a></dd>
+                    <dd><a href="#">帮助</a></dd>
+                </dl>
+            </div>
+        </div>
+
+        <!-- 固定模块 -->
+        <div class="fix">
+            <img src="images/pvp.png" alt="">
+            <h5>妲己一直爱主人</h5>
+        </div>
+        <!-- <div class="course">
+            <h2>我的课程表</h2>
+            <div class="bd">
+                <ul>
+                    <li>
+                        <h4>继续学习 程序设计语言</h4>
+                        <p>正在学习-适用对象</p>
+                    </li>
+                    <li>
+                        <h4>继续学习 程序设计语言</h4>
+                        <p>正在学习-适用对象</p>
+                    </li>
+                    <li>
+                        <h4>继续学习 程序设计语言</h4>
+                        <p>正在学习-适用对象</p>
+                    </li>
+                </ul>
+                <a href="#" class="more">全部课程</a>
+            </div> -->
+        <!-- 跟随鼠标移动的天使
+        <img src="images/angel.gif" alt="" class="angel"> -->
+
+
+</body>
+<script src="script.js"></script>
+
+</html>
